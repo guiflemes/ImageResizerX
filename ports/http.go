@@ -7,6 +7,7 @@ import (
 	"imageResizerX/resizer"
 	"log"
 	"net/http"
+	"os"
 	"path/filepath"
 	"strings"
 
@@ -95,7 +96,14 @@ func (a *httpApp) WebsocketHandler(w http.ResponseWriter, r *http.Request) {
 
 func (a *httpApp) DownloadHandler(w http.ResponseWriter, r *http.Request) {
 	filename := strings.TrimPrefix(r.URL.Path, "/download/")
-	http.ServeFile(w, r, filepath.Join("uploads", filename))
+	filePath := filepath.Join("uploads", filename)
+
+	if _, err := os.Stat(filePath); os.IsNotExist(err) {
+		http.Error(w, "File not found", http.StatusNotFound)
+		return
+	}
+
+	http.ServeFile(w, r, filePath)
 }
 
 var views = jet.NewSet(
