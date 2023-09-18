@@ -85,3 +85,21 @@
 {"level":"info","timestamp":"2023-09-18T22:47:48.474Z","msg":"add subscription"}
 {"level":"info","timestamp":"2023-09-18T22:47:49.472Z","msg":"Brodcast message to all subscriptions"}
 {"level":"info","timestamp":"2023-09-18T22:47:49.472Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T23:11:15.177Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T23:11:19.561Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T23:11:19.561Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T23:12:18.550Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T23:12:20.218Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T23:12:20.872Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T23:12:22.194Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T23:12:23.632Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T23:12:23.632Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T23:13:52.267Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T23:13:53.932Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T23:13:53.932Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T23:14:37.271Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T23:14:38.274Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T23:14:38.275Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T23:15:48.036Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T23:15:49.054Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T23:15:49.054Z","msg":"remove Subscription"}

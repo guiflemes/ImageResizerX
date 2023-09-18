@@ -49,14 +49,14 @@ func NewImageResizer() *ImageResizer {
 			}
 			return imaging.Resize(img, width, heigth, imaging.Lanczos), nil
 		},
-		encode: func(file *os.File, img *image.NRGBA, fmt ImageFmt) error {
+		encode: func(file *os.File, img *image.NRGBA, format ImageFmt) error {
 
-			format := map[ImageFmt]imaging.Format{
+			f := map[ImageFmt]imaging.Format{
 				JPEG: imaging.JPEG,
 				PNG:  imaging.PNG,
-			}[fmt]
+			}[format]
 
-			err := imaging.Encode(file, img, format)
+			err := imaging.Encode(file, img, f)
 
 			if err != nil {
 				logs.Logger.Error("Failed to performe image encode",
@@ -71,6 +71,7 @@ func NewImageResizer() *ImageResizer {
 }
 
 func (r *ImageResizer) ResizeImage(originalFile OriginalFile, width, heigth int, format ImageFmt) (string, error) {
+
 	img, err := r.resize(originalFile.File, width, heigth)
 	if err != nil {
 		return "", err
