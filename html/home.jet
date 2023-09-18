@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Resizer</title>
+    <!-- Add your CSS stylesheets here, if needed -->
+</head>
+<body>
+    <div class="container">
+        <h1>Image Resizer</h1>
+        <hr>
+
+        <!-- Image Upload Section -->
+        <div>
+            <h3>Upload Image</h3>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" name="file" accept="image/*">
+                <button type="button" id="uploadButton">Upload</button>
+            </form>
+        </div>
+
+        <!-- Real-time Updates Section -->
+        <div>
+            <h3>Real-time Updates</h3>
+            <div id="status">Status: Not Connected</div>
+            <div id="updateMessage" style="display: none;">
+                Image processing is complete! <a id="downloadLink" href="/api/v1/download/your-image-filename.jpg" download>Download</a>
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    <!-- JavaScript code for WebSocket communication and AJAX upload -->
+    <script>
+        // WebSocket URL (replace with your server's address)
+        const socket = new WebSocket("ws://127.0.0.0:8080/ws");
+
+        // DOM elements
+        const statusDiv = document.getElementById("status");
+        const updateMessageDiv = document.getElementById("updateMessage");
+        const downloadLink = document.getElementById("downloadLink");
+        const uploadButton = document.getElementById("uploadButton");
+
+        // Event handler for WebSocket connection open
+        socket.addEventListener("open", (event) => {
+            statusDiv.textContent = "Status: Connected";
+        });
+
+        // Event handler for WebSocket messages
+        socket.addEventListener("message", (event) => {
+            const data = JSON.parse(event.data);
+
+            // Handle different types of messages from the server
+            switch (data.action) {
+                case "processing_complete":
+
+                    statusDiv.textContent = "Status: Processing Complete";
+                    updateMessageDiv.style.display = "block";
+                    downloadLink.href = data.download_url;
+                    break;
+
+            
+                case "processing_failed":
+                    statusDiv.textContent = "Status: Processing Failed";
+                    updateMessageDiv.style.display = "block";
+                    break;
+
+            }
+        });
+
+        // Event handler for file upload using AJAX
+        uploadButton.addEventListener("click", () => {
+            const formData = new FormData(document.getElementById("uploadForm"));
+
+            // Send the image data to the server using AJAX
+            fetch("/api/v1/upload", {
+                method: "POST",
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response if needed
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+
+            // Update UI for processing
+            statusDiv.textContent = "Status: Processing...";
+            updateMessageDiv.style.display = "none";
+        });
+    </script>
+</body>
+</html>

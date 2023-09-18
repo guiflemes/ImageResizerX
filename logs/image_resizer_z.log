@@ -1,0 +1,87 @@
+{"level":"error","timestamp":"2023-09-17T18:57:15.185Z","msg":"Failed to performe output file creation","error":"open uploads/foto-one-piece_1694977035.png: no such file or directory"}
+{"level":"error","timestamp":"2023-09-17T19:01:12.332Z","msg":"Failed to performe output file creation","error":"open uploads/foto-one-piece_1694977272.png: no such file or directory"}
+{"level":"info","timestamp":"2023-09-18T21:41:56.599Z","msg":"add Subscription"}
+{"level":"info","timestamp":"2023-09-18T21:43:56.457Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T21:45:48.576Z","msg":"close websocket connection"}
+{"level":"info","timestamp":"2023-09-18T21:45:48.576Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T21:48:21.078Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:02:10.961Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:02:15.446Z","msg":"close websocket connection"}
+{"level":"info","timestamp":"2023-09-18T22:02:15.446Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:02:18.246Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:02:44.447Z","msg":"close websocket connection"}
+{"level":"info","timestamp":"2023-09-18T22:02:44.447Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:02:44.470Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:02:45.994Z","msg":"close websocket connection"}
+{"level":"info","timestamp":"2023-09-18T22:02:45.994Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:02:46.006Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T22:07:13.178Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:07:14.016Z","msg":"close websocket connection"}
+{"level":"info","timestamp":"2023-09-18T22:07:14.016Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:07:14.038Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:07:16.941Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T22:07:16.941Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:07:30.527Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:07:34.318Z","msg":"close websocket connection"}
+{"level":"info","timestamp":"2023-09-18T22:07:34.318Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:08:05.928Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:08:12.979Z","msg":"close websocket connection"}
+{"level":"info","timestamp":"2023-09-18T22:08:12.979Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:09:33.796Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:09:34.860Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T22:09:34.860Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:11:12.113Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:11:13.226Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T22:11:13.226Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:11:21.316Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:15:54.642Z","msg":"close websocket connection"}
+{"level":"info","timestamp":"2023-09-18T22:15:54.642Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:15:54.680Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:16:13.179Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T22:16:13.180Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:18:35.239Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:18:42.338Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T22:18:42.338Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:19:00.303Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:19:03.604Z","msg":"close websocket connection"}
+{"level":"info","timestamp":"2023-09-18T22:19:03.604Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:19:03.632Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:19:08.825Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T22:19:08.825Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:19:12.816Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:19:41.853Z","msg":"close websocket connection"}
+{"level":"info","timestamp":"2023-09-18T22:19:41.853Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:19:41.876Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:19:46.942Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T22:19:46.942Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:25:25.381Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:25:29.679Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T22:25:29.679Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:25:35.055Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:30:07.375Z","msg":"close websocket connection"}
+{"level":"info","timestamp":"2023-09-18T22:30:07.375Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:30:07.399Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:30:08.139Z","msg":"close websocket connection"}
+{"level":"info","timestamp":"2023-09-18T22:30:08.139Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:30:08.154Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:30:12.493Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T22:30:12.493Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:33:28.400Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T22:33:29.892Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T22:33:30.427Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T22:33:35.946Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T22:33:39.860Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:33:45.397Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T22:33:45.397Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:37:09.743Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:37:12.347Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T22:37:12.348Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:37:51.304Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:38:05.217Z","msg":"close websocket connection"}
+{"level":"info","timestamp":"2023-09-18T22:38:05.217Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:38:05.239Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:38:13.389Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T22:38:13.389Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-18T22:47:48.474Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-18T22:47:49.472Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-18T22:47:49.472Z","msg":"remove Subscription"}
