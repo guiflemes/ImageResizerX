@@ -103,6 +103,8 @@ func (a *httpApp) DownloadHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	w.Header().Set("Content-Type", "image/jpeg")
+
 	http.ServeFile(w, r, filePath)
 }
 
