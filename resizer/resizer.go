@@ -14,9 +14,23 @@ import (
 	"go.uber.org/zap"
 )
 
-type OriginalFile struct {
-	File multipart.File
-	Name string
+type Image struct {
+	File   multipart.File
+	Header *multipart.FileHeader
+}
+
+func (i *Image) Format() ImageFmt {
+	mime := i.Header.Header.Get("Content-Type")
+	imagefmt := strings.TrimSuffix(mime, "image/")
+
+	return map[string]ImageFmt{
+		PNG.format:  PNG,
+		JPEG.format: JPEG,
+	}[imagefmt]
+}
+
+func (i *Image) FilenameName() string {
+	return i.Header.Filename
 }
 
 type ImageFmt struct {
@@ -70,16 +84,16 @@ func NewImageResizer() *ImageResizer {
 	}
 }
 
-func (r *ImageResizer) ResizeImage(originalFile OriginalFile, width, heigth int, format ImageFmt) (string, error) {
+func (r *ImageResizer) ResizeImage(originalImage Image, width, heigth int) (string, error) {
 
-	img, err := r.resize(originalFile.File, width, heigth)
+	resizedImg, err := r.resize(originalImage.File, width, heigth)
 	if err != nil {
 		return "", err
 	}
 
-	uniqueName := r.generateUniqueFilename(originalFile.Name)
+	uniqueName := r.generateUniqueFilename(originalImage.FilenameName())
 
-	err = r.save(img, uniqueName, format)
+	err = r.save(resizedImg, uniqueName, originalImage.Format())
 	if err != nil {
 		return "", err
 	}

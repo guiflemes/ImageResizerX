@@ -53,7 +53,7 @@ func (a *httpApp) UploadHandler(w http.ResponseWriter, r *http.Request) {
 	a.runner.RunTask(func() {
 		message := resizer.Message{Action: "processing_failed", DownloadUrl: ""}
 
-		out, err := a.imageResize.ResizeImage(resizer.OriginalFile{File: file, Name: header.Filename}, 300, 200, resizer.JPEG)
+		out, err := a.imageResize.ResizeImage(resizer.Image{File: file, Header: header}, 300, 200)
 
 		if err == nil {
 			message.Action = "processing_complete"
