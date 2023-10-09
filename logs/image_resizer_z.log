@@ -222,3 +222,13 @@
 {"level":"info","timestamp":"2023-09-19T20:58:14.945Z","msg":"remove Subscription"}
 {"level":"error","timestamp":"2023-09-19T20:58:40.751Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"null\" is not authorized for Host \"127.0.0.0:8080\""}
 {"level":"info","timestamp":"2023-09-19T20:58:59.848Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-26T23:49:53.957Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-26T23:50:03.071Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-26T23:50:03.071Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-09-27T00:10:39.549Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-09-27T00:10:44.969Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-09-27T00:10:44.969Z","msg":"remove Subscription"}
+{"level":"error","timestamp":"2023-09-27T00:10:48.301Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"null\" is not authorized for Host \"127.0.0.0:8080\""}
+{"level":"error","timestamp":"2023-09-27T00:11:12.403Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"null\" is not authorized for Host \"127.0.0.0:8080\""}
+{"level":"error","timestamp":"2023-09-27T00:11:53.561Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"null\" is not authorized for Host \"127.0.0.0:8080\""}
+{"level":"error","timestamp":"2023-09-27T00:12:11.140Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"null\" is not authorized for Host \"127.0.0.0:8080\""}

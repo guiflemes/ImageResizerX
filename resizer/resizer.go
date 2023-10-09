@@ -5,7 +5,6 @@ import (
 	"image"
 	"imageResizerX/logs"
 	"mime/multipart"
-	"os"
 	"path/filepath"
 	"strings"
 	"time"
@@ -14,41 +13,40 @@ import (
 	"go.uber.org/zap"
 )
 
-type Image struct {
-	File   multipart.File
-	Header *multipart.FileHeader
+var validImageInputs = []string{
+	"image/png",
+	"image/jpeg",
 }
 
-func (i *Image) Format() ImageFmt {
-	mime := i.Header.Header.Get("Content-Type")
-	imagefmt := strings.TrimSuffix(mime, "image/")
-
-	return map[string]ImageFmt{
-		PNG.format:  PNG,
-		JPEG.format: JPEG,
-	}[imagefmt]
+func matchImageFmt(format string) bool {
+	for _, f := range validImageInputs {
+		if format == f {
+			return true
+		}
+	}
+	return false
 }
 
-func (i *Image) FilenameName() string {
-	return i.Header.Filename
+type originalImg struct {
+	File     multipart.File
+	Filename string
+	Format   string
 }
 
-type ImageFmt struct {
-	format string
-}
+func NewOriginalImage(file multipart.File, filename string, format string) (*originalImg, error) {
+	if !matchImageFmt(format) {
+		return nil, fmt.Errorf("image fmt %s do not match acceptable", format)
+	}
 
-func (i ImageFmt) String() string {
-	return i.format
+	return &originalImg{
+		File:     file,
+		Filename: filename,
+		Format:   format,
+	}, nil
 }
-
-var (
-	PNG  = ImageFmt{"PNG"}
-	JPEG = ImageFmt{"JPEG"}
-)
 
 type ImageResizer struct {
 	resize func(file multipart.File, width int, heigth int) (*image.NRGBA, error)
-	encode func(file *os.File, img *image.NRGBA, fmt ImageFmt) error
 }
 
 func NewImageResizer() *ImageResizer {
@@ -63,37 +61,19 @@ func NewImageResizer() *ImageResizer {
 			}
 			return imaging.Resize(img, width, heigth, imaging.Lanczos), nil
 		},
-		encode: func(file *os.File, img *image.NRGBA, format ImageFmt) error {
-
-			f := map[ImageFmt]imaging.Format{
-				JPEG: imaging.JPEG,
-				PNG:  imaging.PNG,
-			}[format]
-
-			err := imaging.Encode(file, img, f)
-
-			if err != nil {
-				logs.Logger.Error("Failed to performe image encode",
-					zap.Error(err),
-				)
-				return err
-			}
-
-			return nil
-		},
 	}
 }
 
-func (r *ImageResizer) ResizeImage(originalImage Image, width, heigth int) (string, error) {
+func (r *ImageResizer) ResizeImage(originalImage *originalImg, width, heigth int) (string, error) {
 
 	resizedImg, err := r.resize(originalImage.File, width, heigth)
 	if err != nil {
 		return "", err
 	}
 
-	uniqueName := r.generateUniqueFilename(originalImage.FilenameName())
+	uniqueName := r.generateUniqueFilename(originalImage.Filename)
 
-	err = r.save(resizedImg, uniqueName, originalImage.Format())
+	err = r.save(resizedImg, uniqueName, originalImage.Format)
 	if err != nil {
 		return "", err
 	}
@@ -108,17 +88,19 @@ func (r *ImageResizer) generateUniqueFilename(originalFilename string) string {
 	return fmt.Sprintf("%s_%d%s", base, time.Now().Unix(), sufix)
 }
 
-func (r *ImageResizer) save(img *image.NRGBA, filename string, format ImageFmt) error {
+func (r *ImageResizer) save(img *image.NRGBA, filename string, format string) error {
+	return nil
 
-	outputFile, err := os.Create(filepath.Join("uploads", filename))
-	if err != nil {
-		logs.Logger.Error("Failed to performe output file creation",
-			zap.Error(err),
-		)
-		return err
-	}
+	// err := r.fileManager.Open(filepath.Join("uploads", filename))
+	// defer r.fileManager.Close()
 
-	defer outputFile.Close()
+	// if err != nil {
+	// 	logs.Logger.Error("Failed to performe output file creation",
+	// 		zap.Error(err),
+	// 	)
+	// 	return err
+	// }
 
-	return r.encode(outputFile, img, format)
+	// return r.encode(r.fileManager, img, format)
+
 }
