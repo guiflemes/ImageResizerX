@@ -24,8 +24,8 @@ type ImageFmt string
 
 const ImgFmt ImageFmt = "imgFmt"
 
-func ImageFmtValidatorMiddleware(next http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+func ImageFmtValidatorMiddleware(next http.HandlerFunc) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
 		file, _, err := r.FormFile("file")
 		if err != nil {
 			http.Error(w, "Failed to read uploaded file.", http.StatusInternalServerError)
@@ -50,5 +50,5 @@ func ImageFmtValidatorMiddleware(next http.Handler) http.Handler {
 		ctx := context.WithValue(r.Context(), ImgFmt, strings.TrimPrefix(contentType, "image/"))
 		next.ServeHTTP(w, r.WithContext(ctx))
 
-	})
+	}
 }
