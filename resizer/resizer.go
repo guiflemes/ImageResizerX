@@ -19,8 +19,19 @@ type Image struct {
 	Format   string
 }
 
+type ImageResized struct {
+	Img    *image.NRGBA
+	Name   string
+	Format string
+}
+
+type Storer interface {
+	Save(img *ImageResized) error
+}
+
 type ImageResizer struct {
 	resize func(file multipart.File, width int, heigth int) (*image.NRGBA, error)
+	storer Storer
 }
 
 func NewImageResizer() *ImageResizer {
@@ -40,14 +51,20 @@ func NewImageResizer() *ImageResizer {
 
 func (r *ImageResizer) ResizeImage(originalImage *Image, width, heigth int) (string, error) {
 
-	resizedImg, err := r.resize(originalImage.File, width, heigth)
+	img, err := r.resize(originalImage.File, width, heigth)
 	if err != nil {
 		return "", err
 	}
 
 	uniqueName := r.generateUniqueFilename(originalImage.Filename)
 
-	err = r.save(resizedImg, uniqueName, originalImage.Format)
+	resizedImg := &ImageResized{
+		Img:    img,
+		Name:   uniqueName,
+		Format: originalImage.Format,
+	}
+
+	err = r.save(resizedImg)
 	if err != nil {
 		return "", err
 	}
@@ -62,19 +79,6 @@ func (r *ImageResizer) generateUniqueFilename(originalFilename string) string {
 	return fmt.Sprintf("%s_%d%s", base, time.Now().Unix(), sufix)
 }
 
-func (r *ImageResizer) save(img *image.NRGBA, filename string, format string) error {
-	return nil
-
-	// err := r.fileManager.Open(filepath.Join("uploads", filename))
-	// defer r.fileManager.Close()
-
-	// if err != nil {
-	// 	logs.Logger.Error("Failed to performe output file creation",
-	// 		zap.Error(err),
-	// 	)
-	// 	return err
-	// }
-
-	// return r.encode(r.fileManager, img, format)
-
+func (r *ImageResizer) save(img *ImageResized) error {
+	return r.storer.Save(img)
 }

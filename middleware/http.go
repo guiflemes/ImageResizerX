@@ -3,6 +3,7 @@ package middleware
 import (
 	"context"
 	"net/http"
+	"strings"
 )
 
 var validImageInputs = []string{
@@ -46,7 +47,7 @@ func ImageFmtValidatorMiddleware(next http.Handler) http.Handler {
 			http.Error(w, "Invalid image format. Only images are allowed.", http.StatusBadRequest)
 		}
 
-		ctx := context.WithValue(r.Context(), ImgFmt, contentType)
+		ctx := context.WithValue(r.Context(), ImgFmt, strings.TrimPrefix(contentType, "image/"))
 		next.ServeHTTP(w, r.WithContext(ctx))
 
 	})

@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"image"
 	"imageResizerX/logs"
-	"imageResizerX/utils"
+	"imageResizerX/resizer"
 	"io"
 	"os"
 	"path/filepath"
@@ -76,18 +76,18 @@ func (fm *fileManager) Close() error {
 
 type StorageInMemory struct {
 	fileManager FileManager
-	encode      func(file io.Writer, img *image.NRGBA, fmt utils.ImageFmt) error
+	encode      func(file io.Writer, img *image.NRGBA, imgFormat string) error
 }
 
 func NewStotageInMemory() *StorageInMemory {
 	return &StorageInMemory{
 		fileManager: NewFileManager(),
-		encode: func(file io.Writer, img *image.NRGBA, format utils.ImageFmt) error {
+		encode: func(file io.Writer, img *image.NRGBA, imgFormat string) error {
 
-			f := map[utils.ImageFmt]imaging.Format{
-				utils.JPEG: imaging.JPEG,
-				utils.PNG:  imaging.PNG,
-			}[format]
+			f := map[string]imaging.Format{
+				"jpeg": imaging.JPEG,
+				"png":  imaging.PNG,
+			}[imgFormat]
 
 			err := imaging.Encode(file, img, f)
 
@@ -103,8 +103,8 @@ func NewStotageInMemory() *StorageInMemory {
 	}
 }
 
-func (s *StorageInMemory) Save(img *image.NRGBA, filename string, format utils.ImageFmt) error {
-	err := s.fileManager.Open(filepath.Join("uploads", filename))
+func (s *StorageInMemory) Save(img *resizer.ImageResized) error {
+	err := s.fileManager.Open(filepath.Join("uploads", img.Name))
 	defer s.fileManager.Close()
 	if err != nil {
 		logs.Logger.Error("Failed to performe output file creation",
@@ -113,5 +113,5 @@ func (s *StorageInMemory) Save(img *image.NRGBA, filename string, format utils.I
 		return err
 	}
 
-	return s.encode(s.fileManager, img, format)
+	return s.encode(s.fileManager, img.Img, img.Format)
 }
