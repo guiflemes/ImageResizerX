@@ -21,6 +21,8 @@ func matchImageFmt(format string) bool {
 
 type ImageFmt string
 
+const ImgFmt ImageFmt = "imgFmt"
+
 func ImageFmtValidatorMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		file, _, err := r.FormFile("file")
@@ -44,7 +46,7 @@ func ImageFmtValidatorMiddleware(next http.Handler) http.Handler {
 			http.Error(w, "Invalid image format. Only images are allowed.", http.StatusBadRequest)
 		}
 
-		ctx := context.WithValue(r.Context(), ImageFmt(contentType), contentType)
+		ctx := context.WithValue(r.Context(), ImgFmt, contentType)
 		next.ServeHTTP(w, r.WithContext(ctx))
 
 	})

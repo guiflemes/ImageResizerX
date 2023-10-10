@@ -13,36 +13,10 @@ import (
 	"go.uber.org/zap"
 )
 
-var validImageInputs = []string{
-	"image/png",
-	"image/jpeg",
-}
-
-func matchImageFmt(format string) bool {
-	for _, f := range validImageInputs {
-		if format == f {
-			return true
-		}
-	}
-	return false
-}
-
-type originalImg struct {
+type Image struct {
 	File     multipart.File
 	Filename string
 	Format   string
-}
-
-func NewOriginalImage(file multipart.File, filename string, format string) (*originalImg, error) {
-	if !matchImageFmt(format) {
-		return nil, fmt.Errorf("image fmt %s do not match acceptable", format)
-	}
-
-	return &originalImg{
-		File:     file,
-		Filename: filename,
-		Format:   format,
-	}, nil
 }
 
 type ImageResizer struct {
@@ -64,7 +38,7 @@ func NewImageResizer() *ImageResizer {
 	}
 }
 
-func (r *ImageResizer) ResizeImage(originalImage *originalImg, width, heigth int) (string, error) {
+func (r *ImageResizer) ResizeImage(originalImage *Image, width, heigth int) (string, error) {
 
 	resizedImg, err := r.resize(originalImage.File, width, heigth)
 	if err != nil {

@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"imageResizerX/logs"
+	"imageResizerX/middleware"
 	"imageResizerX/resizer"
 	"log"
 	"net/http"
@@ -50,15 +51,15 @@ func (a *httpApp) UploadHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusBadGateway)
-		return
-	}
+	imageFmt := r.Context().Value(middleware.ImgFmt).(string)
 
 	a.runner.RunTask(func() {
 		message := resizer.Message{Action: "processing_failed", DownloadUrl: ""}
 
-		out, err := a.imageResize.ResizeImage(img, 300, 200)
+		out, err := a.imageResize.ResizeImage(
+			&resizer.Image{File: file, Filename: header.Filename, Format: imageFmt},
+			300,
+			200)
 
 		if err == nil {
 			message.Action = "processing_complete"
