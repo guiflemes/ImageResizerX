@@ -1,234 +1,41 @@
-{"level":"error","timestamp":"2023-09-17T18:57:15.185Z","msg":"Failed to performe output file creation","error":"open uploads/foto-one-piece_1694977035.png: no such file or directory"}
-{"level":"error","timestamp":"2023-09-17T19:01:12.332Z","msg":"Failed to performe output file creation","error":"open uploads/foto-one-piece_1694977272.png: no such file or directory"}
-{"level":"info","timestamp":"2023-09-18T21:41:56.599Z","msg":"add Subscription"}
-{"level":"info","timestamp":"2023-09-18T21:43:56.457Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T21:45:48.576Z","msg":"close websocket connection"}
-{"level":"info","timestamp":"2023-09-18T21:45:48.576Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T21:48:21.078Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:02:10.961Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:02:15.446Z","msg":"close websocket connection"}
-{"level":"info","timestamp":"2023-09-18T22:02:15.446Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:02:18.246Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:02:44.447Z","msg":"close websocket connection"}
-{"level":"info","timestamp":"2023-09-18T22:02:44.447Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:02:44.470Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:02:45.994Z","msg":"close websocket connection"}
-{"level":"info","timestamp":"2023-09-18T22:02:45.994Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:02:46.006Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T22:07:13.178Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:07:14.016Z","msg":"close websocket connection"}
-{"level":"info","timestamp":"2023-09-18T22:07:14.016Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:07:14.038Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:07:16.941Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T22:07:16.941Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:07:30.527Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:07:34.318Z","msg":"close websocket connection"}
-{"level":"info","timestamp":"2023-09-18T22:07:34.318Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:08:05.928Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:08:12.979Z","msg":"close websocket connection"}
-{"level":"info","timestamp":"2023-09-18T22:08:12.979Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:09:33.796Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:09:34.860Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T22:09:34.860Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:11:12.113Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:11:13.226Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T22:11:13.226Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:11:21.316Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:15:54.642Z","msg":"close websocket connection"}
-{"level":"info","timestamp":"2023-09-18T22:15:54.642Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:15:54.680Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:16:13.179Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T22:16:13.180Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:18:35.239Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:18:42.338Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T22:18:42.338Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:19:00.303Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:19:03.604Z","msg":"close websocket connection"}
-{"level":"info","timestamp":"2023-09-18T22:19:03.604Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:19:03.632Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:19:08.825Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T22:19:08.825Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:19:12.816Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:19:41.853Z","msg":"close websocket connection"}
-{"level":"info","timestamp":"2023-09-18T22:19:41.853Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:19:41.876Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:19:46.942Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T22:19:46.942Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:25:25.381Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:25:29.679Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T22:25:29.679Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:25:35.055Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:30:07.375Z","msg":"close websocket connection"}
-{"level":"info","timestamp":"2023-09-18T22:30:07.375Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:30:07.399Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:30:08.139Z","msg":"close websocket connection"}
-{"level":"info","timestamp":"2023-09-18T22:30:08.139Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:30:08.154Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:30:12.493Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T22:30:12.493Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:33:28.400Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T22:33:29.892Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T22:33:30.427Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T22:33:35.946Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T22:33:39.860Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:33:45.397Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T22:33:45.397Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:37:09.743Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:37:12.347Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T22:37:12.348Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:37:51.304Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:38:05.217Z","msg":"close websocket connection"}
-{"level":"info","timestamp":"2023-09-18T22:38:05.217Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:38:05.239Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:38:13.389Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T22:38:13.389Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T22:47:48.474Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T22:47:49.472Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T22:47:49.472Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T23:11:15.177Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T23:11:19.561Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:11:19.561Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T23:12:18.550Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:12:20.218Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:12:20.872Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:12:22.194Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T23:12:23.632Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:12:23.632Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T23:13:52.267Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T23:13:53.932Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:13:53.932Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T23:14:37.271Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T23:14:38.274Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:14:38.275Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T23:15:48.036Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T23:15:49.054Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:15:49.054Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T23:18:02.668Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T23:18:06.329Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:18:06.329Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T23:42:15.304Z","msg":"add subscription"}
-{"level":"error","timestamp":"2023-09-18T23:42:17.059Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:42:17.059Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:42:17.059Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T23:42:33.930Z","msg":"add subscription"}
-{"level":"error","timestamp":"2023-09-18T23:42:35.194Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:42:35.194Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:42:35.194Z","msg":"remove Subscription"}
-{"level":"error","timestamp":"2023-09-18T23:42:43.926Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:42:43.926Z","msg":"Brodcast message to all subscriptions"}
-{"level":"error","timestamp":"2023-09-18T23:42:44.543Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:42:44.543Z","msg":"Brodcast message to all subscriptions"}
-{"level":"error","timestamp":"2023-09-18T23:42:45.539Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:42:45.539Z","msg":"Brodcast message to all subscriptions"}
-{"level":"error","timestamp":"2023-09-18T23:42:46.499Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:42:46.499Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:43:34.086Z","msg":"add subscription"}
-{"level":"error","timestamp":"2023-09-18T23:43:34.815Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:43:34.815Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:43:34.816Z","msg":"remove Subscription"}
-{"level":"error","timestamp":"2023-09-18T23:44:34.911Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:44:34.912Z","msg":"Brodcast message to all subscriptions"}
-{"level":"error","timestamp":"2023-09-18T23:44:36.659Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:44:36.659Z","msg":"Brodcast message to all subscriptions"}
-{"level":"error","timestamp":"2023-09-18T23:44:36.995Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:44:36.995Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:44:41.222Z","msg":"add subscription"}
-{"level":"error","timestamp":"2023-09-18T23:44:41.946Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:44:41.946Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:44:41.946Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T23:44:47.564Z","msg":"add subscription"}
-{"level":"error","timestamp":"2023-09-18T23:45:12.323Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:45:12.323Z","msg":"Brodcast message to all subscriptions"}
-{"level":"error","timestamp":"2023-09-18T23:45:15.063Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:45:15.063Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:45:25.574Z","msg":"add subscription"}
-{"level":"error","timestamp":"2023-09-18T23:45:26.335Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:45:26.335Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:45:26.335Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T23:46:25.625Z","msg":"add subscription"}
-{"level":"error","timestamp":"2023-09-18T23:46:26.507Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:46:26.507Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:46:26.507Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T23:47:08.044Z","msg":"add subscription"}
-{"level":"error","timestamp":"2023-09-18T23:47:09.000Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:47:09.000Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:47:09.000Z","msg":"remove Subscription"}
-{"level":"error","timestamp":"2023-09-18T23:47:16.163Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:47:16.163Z","msg":"Brodcast message to all subscriptions"}
-{"level":"error","timestamp":"2023-09-18T23:47:17.050Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:47:17.050Z","msg":"Brodcast message to all subscriptions"}
-{"level":"error","timestamp":"2023-09-18T23:47:42.706Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:47:42.706Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:47:43.626Z","msg":"add subscription"}
-{"level":"error","timestamp":"2023-09-18T23:47:44.399Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:47:44.399Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:47:44.399Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T23:48:31.972Z","msg":"add subscription"}
-{"level":"error","timestamp":"2023-09-18T23:48:32.623Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:48:32.623Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:48:32.623Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T23:48:39.581Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T23:48:40.539Z","msg":"close websocket connection"}
-{"level":"info","timestamp":"2023-09-18T23:48:40.540Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T23:48:40.571Z","msg":"add subscription"}
-{"level":"error","timestamp":"2023-09-18T23:48:41.287Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:48:41.287Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:48:41.287Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T23:49:16.585Z","msg":"add subscription"}
-{"level":"error","timestamp":"2023-09-18T23:49:17.576Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:49:17.576Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:49:17.576Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T23:49:24.361Z","msg":"add subscription"}
-{"level":"error","timestamp":"2023-09-18T23:49:25.392Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:49:25.393Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:49:25.393Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T23:49:36.093Z","msg":"add subscription"}
-{"level":"error","timestamp":"2023-09-18T23:49:43.675Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-18T23:49:43.676Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:49:43.676Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-18T23:50:32.897Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-18T23:50:33.959Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-18T23:50:33.959Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-19T18:58:20.151Z","msg":"add subscription"}
-{"level":"error","timestamp":"2023-09-19T18:58:25.126Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-19T18:58:25.126Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-19T18:58:25.127Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-19T18:59:05.369Z","msg":"add subscription"}
-{"level":"error","timestamp":"2023-09-19T18:59:08.969Z","msg":"Failed to performe image decode","error":"image: unknown format"}
-{"level":"info","timestamp":"2023-09-19T18:59:08.969Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-19T18:59:08.970Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-19T19:12:23.142Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-19T19:12:27.721Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-19T19:12:27.722Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-19T19:18:37.144Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-19T19:19:02.886Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-19T19:19:03.599Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-19T19:19:04.394Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-19T19:19:09.172Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-19T19:19:09.172Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-19T19:19:21.819Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-19T20:00:43.036Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-19T20:00:43.036Z","msg":"remove Subscription"}
-{"level":"error","timestamp":"2023-09-19T20:00:47.421Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"null\" is not authorized for Host \"127.0.0.0:8080\""}
-{"level":"error","timestamp":"2023-09-19T20:01:10.150Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"null\" is not authorized for Host \"127.0.0.0:8080\""}
-{"level":"info","timestamp":"2023-09-19T20:38:29.719Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-19T20:38:33.630Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-19T20:38:33.631Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-19T20:56:33.797Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-19T20:56:37.757Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-19T20:56:37.757Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-19T20:58:11.742Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-19T20:58:14.945Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-19T20:58:14.945Z","msg":"remove Subscription"}
-{"level":"error","timestamp":"2023-09-19T20:58:40.751Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"null\" is not authorized for Host \"127.0.0.0:8080\""}
-{"level":"info","timestamp":"2023-09-19T20:58:59.848Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-26T23:49:53.957Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-26T23:50:03.071Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-26T23:50:03.071Z","msg":"remove Subscription"}
-{"level":"info","timestamp":"2023-09-27T00:10:39.549Z","msg":"add subscription"}
-{"level":"info","timestamp":"2023-09-27T00:10:44.969Z","msg":"Brodcast message to all subscriptions"}
-{"level":"info","timestamp":"2023-09-27T00:10:44.969Z","msg":"remove Subscription"}
-{"level":"error","timestamp":"2023-09-27T00:10:48.301Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"null\" is not authorized for Host \"127.0.0.0:8080\""}
-{"level":"error","timestamp":"2023-09-27T00:11:12.403Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"null\" is not authorized for Host \"127.0.0.0:8080\""}
-{"level":"error","timestamp":"2023-09-27T00:11:53.561Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"null\" is not authorized for Host \"127.0.0.0:8080\""}
-{"level":"error","timestamp":"2023-09-27T00:12:11.140Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"null\" is not authorized for Host \"127.0.0.0:8080\""}
+{"level":"error","timestamp":"2023-10-19T15:28:35.892Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"http://localhost:8080\" is not authorized for Host \"127.0.0.0:8080\""}
+{"level":"info","timestamp":"2023-10-19T15:28:41.452Z","msg":"Brodcast message to all subscriptions"}
+{"level":"error","timestamp":"2023-10-19T15:29:30.631Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"http://localhost:8080\" is not authorized for Host \"127.0.0.0:8080\""}
+{"level":"error","timestamp":"2023-10-19T15:29:35.345Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"http://localhost:8080\" is not authorized for Host \"127.0.0.0:8080\""}
+{"level":"error","timestamp":"2023-10-19T15:29:36.007Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"http://localhost:8080\" is not authorized for Host \"127.0.0.0:8080\""}
+{"level":"error","timestamp":"2023-10-19T15:29:43.027Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"http://localhost:8080\" is not authorized for Host \"127.0.0.0:8080\""}
+{"level":"error","timestamp":"2023-10-19T15:29:45.644Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"http://localhost:8080\" is not authorized for Host \"127.0.0.0:8080\""}
+{"level":"error","timestamp":"2023-10-19T15:29:46.255Z","msg":"Error accepting WebSocket connection","error":"failed to accept WebSocket connection: request Origin \"http://localhost:8080\" is not authorized for Host \"127.0.0.0:8080\""}
+{"level":"info","timestamp":"2023-10-19T15:30:02.685Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-19T15:30:05.142Z","msg":"close websocket connection"}
+{"level":"info","timestamp":"2023-10-19T15:30:05.142Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-19T15:30:05.162Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-19T15:30:11.214Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-19T15:30:11.214Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-19T15:33:22.693Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-19T15:33:30.352Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-19T15:33:30.352Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-19T15:34:19.055Z","msg":"Brodcast message to all subscriptions"}
+{"level":"error","timestamp":"2023-10-19T15:34:23.481Z","msg":"Failed to performe image decode","error":"image: unknown format"}
+{"level":"info","timestamp":"2023-10-19T15:34:23.481Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-19T15:34:25.074Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-19T15:34:37.238Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-19T15:34:37.238Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-19T15:35:21.946Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-19T15:35:27.702Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-19T15:35:27.702Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-19T15:36:15.085Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-19T15:36:20.008Z","msg":"close websocket connection"}
+{"level":"info","timestamp":"2023-10-19T15:36:20.008Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-19T15:36:20.029Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-19T15:36:26.117Z","msg":"close websocket connection"}
+{"level":"info","timestamp":"2023-10-19T15:36:26.117Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-19T15:36:26.134Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-19T15:36:32.391Z","msg":"close websocket connection"}
+{"level":"info","timestamp":"2023-10-19T15:36:32.391Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-19T15:36:32.412Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-19T15:36:34.551Z","msg":"close websocket connection"}
+{"level":"info","timestamp":"2023-10-19T15:36:34.551Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-19T15:36:34.577Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-19T15:36:47.699Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-19T15:36:47.699Z","msg":"remove Subscription"}

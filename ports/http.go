@@ -10,6 +10,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 
 	"go.uber.org/zap"
@@ -39,7 +40,7 @@ func NewHttpApp() *httpApp {
 		runner:           resizer.NewImagePool(5),
 		imageResize:      resizer.NewImageResizer(),
 		websocketHandler: resizer.DefaultwebsocketClient(),
-		websocketOptions: &websocket.AcceptOptions{OriginPatterns: []string{"localhost:3000"}},
+		websocketOptions: &websocket.AcceptOptions{OriginPatterns: []string{"127.0.0.0"}},
 	}
 }
 
@@ -101,16 +102,32 @@ func (a *httpApp) WebsocketHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func (a *httpApp) DownloadHandler(w http.ResponseWriter, r *http.Request) {
-	filename := strings.TrimPrefix(r.URL.Path, "/download/")
+	segments := strings.Split(r.URL.Path, "/")
+
+	if len(segments) < 5 {
+		logs.Logger.Error("Invalid Url", zap.String("url", r.URL.Path))
+		http.Error(w, "Invalid Url", http.StatusBadGateway)
+		return
+	}
+
+	filename := segments[len(segments)-1]
+
+	if filename == "" {
+		logs.Logger.Error("Path param should not be empty")
+		http.Error(w, "Invalid Url", http.StatusBadGateway)
+		return
+	}
+
 	filePath := filepath.Join("uploads", filename)
 
 	if _, err := os.Stat(filePath); os.IsNotExist(err) {
+		logs.Logger.Error("File not found")
 		http.Error(w, "File not found", http.StatusNotFound)
 		return
 	}
 
+	w.Header().Set("Content-Disposition", "attachment; filename="+strconv.Quote(filename))
 	w.Header().Set("Content-Type", "image/png")
-
 	http.ServeFile(w, r, filePath)
 }
 

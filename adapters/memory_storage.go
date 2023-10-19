@@ -3,8 +3,8 @@ package adapters
 import (
 	"bufio"
 	"image"
+	"imageResizerX/domain"
 	"imageResizerX/logs"
-	"imageResizerX/resizer"
 	"io"
 	"os"
 	"path/filepath"
@@ -79,7 +79,7 @@ type StorageInMemory struct {
 	encode      func(file io.Writer, img *image.NRGBA, imgFormat string) error
 }
 
-func NewStotageInMemory() *StorageInMemory {
+func NewStorageInMemory() *StorageInMemory {
 	return &StorageInMemory{
 		fileManager: NewFileManager(),
 		encode: func(file io.Writer, img *image.NRGBA, imgFormat string) error {
@@ -103,7 +103,7 @@ func NewStotageInMemory() *StorageInMemory {
 	}
 }
 
-func (s *StorageInMemory) Save(img *resizer.ImageResized) error {
+func (s *StorageInMemory) Save(img *domain.ImageResized) error {
 	err := s.fileManager.Open(filepath.Join("uploads", img.Name))
 	defer s.fileManager.Close()
 	if err != nil {
