@@ -3,7 +3,6 @@ package resizer
 import (
 	"fmt"
 	"image"
-	"imageResizerX/adapters"
 	"imageResizerX/domain"
 	"imageResizerX/logs"
 	"mime/multipart"
@@ -30,7 +29,7 @@ type ImageResizer struct {
 	storer Storer
 }
 
-func NewImageResizer() *ImageResizer {
+func NewImageResizer(storer Storer) *ImageResizer {
 	return &ImageResizer{
 		resize: func(file multipart.File, width, heigth int) (*image.NRGBA, error) {
 			img, err := imaging.Decode(file)
@@ -42,7 +41,7 @@ func NewImageResizer() *ImageResizer {
 			}
 			return imaging.Resize(img, width, heigth, imaging.Lanczos), nil
 		},
-		storer: adapters.NewStorageInMemory(),
+		storer: storer,
 	}
 }
 

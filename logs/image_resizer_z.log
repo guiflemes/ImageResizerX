@@ -39,3 +39,6 @@
 {"level":"info","timestamp":"2023-10-19T15:36:34.577Z","msg":"add subscription"}
 {"level":"info","timestamp":"2023-10-19T15:36:47.699Z","msg":"Brodcast message to all subscriptions"}
 {"level":"info","timestamp":"2023-10-19T15:36:47.699Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-20T20:00:35.533Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-20T20:00:41.796Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-20T20:00:41.796Z","msg":"remove Subscription"}

@@ -2,6 +2,7 @@ package adapters
 
 import (
 	"bufio"
+	"errors"
 	"image"
 	"imageResizerX/domain"
 	"imageResizerX/logs"
@@ -75,13 +76,15 @@ func (fm *fileManager) Close() error {
 }
 
 type StorageInMemory struct {
-	fileManager FileManager
-	encode      func(file io.Writer, img *image.NRGBA, imgFormat string) error
+	localStorage string
+	fileManager  FileManager
+	encode       func(file io.Writer, img *image.NRGBA, imgFormat string) error
 }
 
 func NewStorageInMemory() *StorageInMemory {
 	return &StorageInMemory{
-		fileManager: NewFileManager(),
+		localStorage: "uploads",
+		fileManager:  NewFileManager(),
 		encode: func(file io.Writer, img *image.NRGBA, imgFormat string) error {
 
 			f := map[string]imaging.Format{
@@ -104,7 +107,7 @@ func NewStorageInMemory() *StorageInMemory {
 }
 
 func (s *StorageInMemory) Save(img *domain.ImageResized) error {
-	err := s.fileManager.Open(filepath.Join("uploads", img.Name))
+	err := s.fileManager.Open(filepath.Join(s.localStorage, img.Name))
 	defer s.fileManager.Close()
 	if err != nil {
 		logs.Logger.Error("Failed to performe output file creation",
@@ -114,4 +117,14 @@ func (s *StorageInMemory) Save(img *domain.ImageResized) error {
 	}
 
 	return s.encode(s.fileManager, img.Img, img.Format)
+}
+
+func (s *StorageInMemory) Retrieve(filename string) (*domain.MemoryImg, error) {
+	filePath := filepath.Join(s.localStorage, filename)
+	if _, err := os.Stat(filePath); os.IsNotExist(err) {
+		logs.Logger.Error("File not found")
+		return nil, errors.New("file not found")
+	}
+
+	return &domain.MemoryImg{FilePath: filePath}, nil
 }

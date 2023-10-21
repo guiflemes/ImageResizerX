@@ -3,13 +3,12 @@ package ports
 import (
 	"context"
 	"errors"
+	"imageResizerX/adapters"
 	"imageResizerX/logs"
 	"imageResizerX/middleware"
 	"imageResizerX/resizer"
 	"log"
 	"net/http"
-	"os"
-	"path/filepath"
 	"strconv"
 	"strings"
 
@@ -28,19 +27,34 @@ type WebsocketHandler interface {
 	Brodcast(msg resizer.Message)
 }
 
+type ImageServer func(w http.ResponseWriter, r *http.Request, filename string)
+
 type httpApp struct {
 	runner           Runner
 	imageResize      *resizer.ImageResizer
 	websocketHandler WebsocketHandler
 	websocketOptions *websocket.AcceptOptions
+	imageServer      ImageServer
 }
 
 func NewHttpApp() *httpApp {
+	localDiskRepo := adapters.NewStorageInMemory()
+
 	return &httpApp{
 		runner:           resizer.NewImagePool(5),
-		imageResize:      resizer.NewImageResizer(),
+		imageResize:      resizer.NewImageResizer(localDiskRepo),
 		websocketHandler: resizer.DefaultwebsocketClient(),
 		websocketOptions: &websocket.AcceptOptions{OriginPatterns: []string{"127.0.0.0"}},
+		imageServer: func(w http.ResponseWriter, r *http.Request, filename string) {
+			img, err := localDiskRepo.Retrieve(filename)
+			if err != nil {
+				http.Error(w, "File not found", http.StatusNotFound)
+			}
+
+			w.Header().Set("Content-Type", "image/"+img.Format())
+			w.Header().Set("Content-Disposition", "attachment; filename="+strconv.Quote(filename))
+			http.ServeFile(w, r, img.FilePath)
+		},
 	}
 }
 
@@ -118,17 +132,7 @@ func (a *httpApp) DownloadHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	filePath := filepath.Join("uploads", filename)
-
-	if _, err := os.Stat(filePath); os.IsNotExist(err) {
-		logs.Logger.Error("File not found")
-		http.Error(w, "File not found", http.StatusNotFound)
-		return
-	}
-
-	w.Header().Set("Content-Disposition", "attachment; filename="+strconv.Quote(filename))
-	w.Header().Set("Content-Type", "image/png")
-	http.ServeFile(w, r, filePath)
+	a.imageServer(w, r, filename)
 }
 
 var views = jet.NewSet(
