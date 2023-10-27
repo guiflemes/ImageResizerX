@@ -42,3 +42,56 @@
 {"level":"info","timestamp":"2023-10-20T20:00:35.533Z","msg":"add subscription"}
 {"level":"info","timestamp":"2023-10-20T20:00:41.796Z","msg":"Brodcast message to all subscriptions"}
 {"level":"info","timestamp":"2023-10-20T20:00:41.796Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-27T00:52:52.350Z","msg":"add subscription"}
+{"level":"error","timestamp":"2023-10-27T00:52:57.654Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698367977.png: no such file or directory"}
+{"level":"info","timestamp":"2023-10-27T00:52:57.659Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-27T00:52:57.659Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-27T01:28:45.026Z","msg":"add subscription"}
+{"level":"error","timestamp":"2023-10-27T01:28:48.263Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370128.png: no such file or directory"}
+{"level":"info","timestamp":"2023-10-27T01:28:48.268Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-27T01:28:48.268Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-27T01:29:56.858Z","msg":"add subscription"}
+{"level":"error","timestamp":"2023-10-27T01:30:00.027Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370200.png: no such file or directory"}
+{"level":"error","timestamp":"2023-10-27T01:30:00.027Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370128.png: no such file or directory"}
+{"level":"info","timestamp":"2023-10-27T01:30:00.032Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-27T01:30:00.032Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-27T01:32:13.021Z","msg":"add subscription"}
+{"level":"error","timestamp":"2023-10-27T01:32:16.372Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370336.png: no such file or directory"}
+{"level":"error","timestamp":"2023-10-27T01:32:16.372Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370200.png: no such file or directory"}
+{"level":"error","timestamp":"2023-10-27T01:32:16.372Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370128.png: no such file or directory"}
+{"level":"info","timestamp":"2023-10-27T01:32:16.377Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-27T01:32:16.377Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-27T01:34:17.164Z","msg":"add subscription"}
+{"level":"error","timestamp":"2023-10-27T01:34:21.248Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370336.png: no such file or directory"}
+{"level":"error","timestamp":"2023-10-27T01:34:21.248Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370200.png: no such file or directory"}
+{"level":"error","timestamp":"2023-10-27T01:34:21.248Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370461.png: no such file or directory"}
+{"level":"info","timestamp":"2023-10-27T01:34:21.253Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-27T01:34:21.253Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-27T01:34:55.560Z","msg":"add subscription"}
+{"level":"error","timestamp":"2023-10-27T01:34:58.485Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370336.png: no such file or directory"}
+{"level":"error","timestamp":"2023-10-27T01:34:58.485Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370200.png: no such file or directory"}
+{"level":"error","timestamp":"2023-10-27T01:34:58.485Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370498.png: no such file or directory"}
+{"level":"error","timestamp":"2023-10-27T01:34:58.486Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370461.png: no such file or directory"}
+{"level":"info","timestamp":"2023-10-27T01:34:58.491Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-27T01:34:58.491Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-27T01:36:23.108Z","msg":"add subscription"}
+{"level":"error","timestamp":"2023-10-27T01:36:26.771Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370336.png: no such file or directory"}
+{"level":"error","timestamp":"2023-10-27T01:36:26.771Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370498.png: no such file or directory"}
+{"level":"error","timestamp":"2023-10-27T01:36:26.771Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370461.png: no such file or directory"}
+{"level":"error","timestamp":"2023-10-27T01:36:26.771Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370586.png: no such file or directory"}
+{"level":"info","timestamp":"2023-10-27T01:36:26.776Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-27T01:36:26.776Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-27T01:40:33.832Z","msg":"add subscription"}
+{"level":"error","timestamp":"2023-10-27T01:40:36.864Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370586.png: no such file or directory"}
+{"level":"error","timestamp":"2023-10-27T01:40:36.864Z","msg":"remove Captura de tela de 2023-10-26 17-54-44_1698370836.png: no such file or directory"}
+{"level":"info","timestamp":"2023-10-27T01:40:36.869Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-27T01:40:36.869Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-27T01:42:32.825Z","msg":"add subscription"}
+{"level":"error","timestamp":"2023-10-27T01:42:36.181Z","msg":"remove image_1697729807.png: no such file or directory"}
+{"level":"error","timestamp":"2023-10-27T01:42:36.181Z","msg":"remove image_1697729727.png: no such file or directory"}
+{"level":"error","timestamp":"2023-10-27T01:42:36.181Z","msg":"remove image_1697729677.png: no such file or directory"}
+{"level":"info","timestamp":"2023-10-27T01:42:36.187Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-27T01:42:36.187Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-27T01:44:36.826Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-27T01:44:40.615Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-27T01:44:40.615Z","msg":"remove Subscription"}

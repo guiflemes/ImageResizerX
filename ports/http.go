@@ -51,6 +51,7 @@ func NewHttpApp() *httpApp {
 				http.Error(w, "File not found", http.StatusNotFound)
 			}
 
+
 			w.Header().Set("Content-Type", "image/"+img.Format())
 			w.Header().Set("Content-Disposition", "attachment; filename="+strconv.Quote(filename))
 			http.ServeFile(w, r, img.FilePath)

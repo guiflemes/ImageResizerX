@@ -19,7 +19,8 @@ type MemoryImg struct {
 }
 
 func (m *MemoryImg) IsValid() bool {
-	return m.CreatedAtUnix() <= time.Now().Unix()
+	lifeTime := int64(60 * 5)
+	return m.CreatedAtUnix()+lifeTime >= time.Now().Unix()
 }
 
 func (m *MemoryImg) CreatedAtUnix() int64 {

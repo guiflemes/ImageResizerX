@@ -2,7 +2,10 @@
 
 * Add GRPC entrypoint
 * Add Unit Tests
-* Create a system to delete image after the download
+* Create a system to delete image after the download 
+    - clean method [V]
+    - create queue to delete it []
+* Inject dimension by client
 
 ## Improvements
 

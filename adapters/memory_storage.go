@@ -116,6 +116,8 @@ func (s *StorageInMemory) Save(img *domain.ImageResized) error {
 		return err
 	}
 
+	go s.clean()
+
 	return s.encode(s.fileManager, img.Img, img.Format)
 }
 
@@ -127,4 +129,36 @@ func (s *StorageInMemory) Retrieve(filename string) (*domain.MemoryImg, error) {
 	}
 
 	return &domain.MemoryImg{FilePath: filePath}, nil
+}
+
+func (s *StorageInMemory) clean() {
+	dir, err := os.Open(s.localStorage)
+
+	if err != nil {
+		logs.Logger.Error("Dir not found")
+		return
+	}
+
+	files, err := dir.ReadDir(0)
+
+	if err != nil {
+		logs.Logger.Error(err.Error())
+		return
+	}
+
+	for i := range files {
+		file := files[i]
+		img := &domain.MemoryImg{FilePath: file.Name()}
+
+		if img.IsValid() {
+			continue
+		}
+		err := os.Remove(s.localStorage + "/" + img.FilePath)
+
+		if err != nil {
+			logs.Logger.Error(err.Error())
+		}
+
+	}
+
 }
