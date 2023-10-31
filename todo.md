@@ -2,10 +2,8 @@
 
 * Add GRPC entrypoint
 * Add Unit Tests
-* Create a system to delete image after the download 
-    - clean method [V]
-    - create queue to delete it []
 * Inject dimension by client
+* Send image to telegram(add an option on front end)
 
 ## Improvements
 

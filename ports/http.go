@@ -47,6 +47,7 @@ func NewHttpApp() *httpApp {
 		websocketOptions: &websocket.AcceptOptions{OriginPatterns: []string{"127.0.0.0"}},
 		imageServer: func(w http.ResponseWriter, r *http.Request, filename string) {
 			img, err := localDiskRepo.Retrieve(filename)
+			
 			if err != nil {
 				http.Error(w, "File not found", http.StatusNotFound)
 			}

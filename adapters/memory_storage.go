@@ -78,13 +78,15 @@ func (fm *fileManager) Close() error {
 type StorageInMemory struct {
 	localStorage string
 	fileManager  FileManager
+	sweepCh      chan struct{}
 	encode       func(file io.Writer, img *image.NRGBA, imgFormat string) error
 }
 
 func NewStorageInMemory() *StorageInMemory {
-	return &StorageInMemory{
+	repo := &StorageInMemory{
 		localStorage: "uploads",
 		fileManager:  NewFileManager(),
+		sweepCh:      make(chan struct{}, 1),
 		encode: func(file io.Writer, img *image.NRGBA, imgFormat string) error {
 
 			f := map[string]imaging.Format{
@@ -104,6 +106,9 @@ func NewStorageInMemory() *StorageInMemory {
 			return nil
 		},
 	}
+
+	repo.sweep()
+	return repo
 }
 
 func (s *StorageInMemory) Save(img *domain.ImageResized) error {
@@ -116,7 +121,10 @@ func (s *StorageInMemory) Save(img *domain.ImageResized) error {
 		return err
 	}
 
-	go s.clean()
+	select {
+	case s.sweepCh <- struct{}{}:
+	default:
+	}
 
 	return s.encode(s.fileManager, img.Img, img.Format)
 }
@@ -161,4 +169,14 @@ func (s *StorageInMemory) clean() {
 
 	}
 
+}
+
+func (s *StorageInMemory) sweep() {
+	go func() {
+		for {
+			<-s.sweepCh
+			s.clean()
+		}
+
+	}()
 }

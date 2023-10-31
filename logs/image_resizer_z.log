@@ -95,3 +95,24 @@
 {"level":"info","timestamp":"2023-10-27T01:44:36.826Z","msg":"add subscription"}
 {"level":"info","timestamp":"2023-10-27T01:44:40.615Z","msg":"Brodcast message to all subscriptions"}
 {"level":"info","timestamp":"2023-10-27T01:44:40.615Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-31T02:15:13.284Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-31T02:15:19.438Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-31T02:15:19.438Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-31T02:15:31.355Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-31T02:15:35.257Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-31T02:15:35.257Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-31T02:16:24.603Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-31T02:16:29.005Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-31T02:16:29.005Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-31T02:17:10.653Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-31T02:17:14.852Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-31T02:17:14.852Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-31T02:17:20.645Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-31T02:17:26.954Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-31T02:17:26.954Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-31T02:19:23.169Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-31T02:19:26.819Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-31T02:19:26.819Z","msg":"remove Subscription"}
+{"level":"info","timestamp":"2023-10-31T02:19:38.896Z","msg":"add subscription"}
+{"level":"info","timestamp":"2023-10-31T02:19:42.753Z","msg":"Brodcast message to all subscriptions"}
+{"level":"info","timestamp":"2023-10-31T02:19:42.753Z","msg":"remove Subscription"}
