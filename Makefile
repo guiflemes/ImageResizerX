@@ -16,3 +16,6 @@ build:
 
 down:
 	docker-compose down --remove-orphans
+
+test:
+	docker-compose exec image-resize-x go test -v ./...

@@ -24,7 +24,7 @@ func (m *MemoryImg) IsValid() bool {
 }
 
 func (m *MemoryImg) CreatedAtUnix() int64 {
-	rgx := regexp.MustCompile(`_(.*?)\.`)
+	rgx := regexp.MustCompile(`_(\d+)\.`)
 
 	match := rgx.FindStringSubmatch(m.FilePath)
 	unixDateAsString := match[1]
