@@ -64,4 +64,31 @@ func TestIsValid(t *testing.T) {
 	}
 }
 
-// func TestForm(t *testing.T)
+func TestFormat(t *testing.T) {
+	assert := assert.New(t)
+
+	type testCase struct {
+		img          *MemoryImg
+		expectResult string
+	}
+
+	for _, scenario := range []testCase{
+		{
+			img:          &MemoryImg{FilePath: "testimage1_1698718519.png"},
+			expectResult: "png",
+		},
+		{
+			img:          &MemoryImg{FilePath: "testimage1_1698718519.jpeg"},
+			expectResult: "jpeg",
+		},
+		{
+			img:          &MemoryImg{FilePath: "testimage1_1698718519.jpg"},
+			expectResult: "jpg",
+		},
+	} {
+		t.Run(scenario.img.FilePath, func(t *testing.T) {
+			result := scenario.img.Format()
+			assert.Equal(result, scenario.expectResult)
+		})
+	}
+}
