@@ -3,6 +3,7 @@ package domain
 import (
 	"fmt"
 	"testing"
+	"time"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -37,3 +38,30 @@ func TestCreatedAtUnix(t *testing.T) {
 	}
 
 }
+
+func TestIsValid(t *testing.T) {
+	assert := assert.New(t)
+
+	type testCase struct {
+		img          *MemoryImg
+		expectResult bool
+	}
+
+	for _, scenario := range []testCase{
+		{
+			img:          &MemoryImg{FilePath: "testimage1_1698718519.png"},
+			expectResult: false,
+		},
+		{
+			img:          &MemoryImg{FilePath: fmt.Sprintf("testimage2_%v.png", time.Now().Unix())},
+			expectResult: true,
+		},
+	} {
+		t.Run(scenario.img.FilePath, func(t *testing.T) {
+			result := scenario.img.IsValid()
+			assert.Equal(result, scenario.expectResult)
+		})
+	}
+}
+
+// func TestForm(t *testing.T)
