@@ -1,6 +1,7 @@
 package resizer
 
 import (
+	"errors"
 	"fmt"
 	"image"
 	"imageResizerX/domain"
@@ -25,10 +26,27 @@ func NewStoreStub() *StoreStub {
 }
 
 func (s *StoreStub) Save(img *domain.ImageResized) error {
+
+	if strings.Contains(img.Name, "error") {
+		return errors.New("error saving on db")
+	}
+
 	s.dataLock.Lock()
 	s.data[img.Name] = img
 	s.dataLock.Unlock()
 	return nil
+}
+
+func (s *StoreStub) Get(name string) *domain.ImageResized {
+	s.dataLock.RLock()
+	defer s.dataLock.RUnlock()
+	img, ok := s.data[name]
+
+	if !ok {
+		return nil
+	}
+
+	return img
 }
 
 type FileStub struct{ mock.Mock }
@@ -60,7 +78,7 @@ func TestResizeImage(t *testing.T) {
 	assert := assert.New(t)
 	storer := NewStoreStub()
 
-	img := &ImageResizer{
+	resizer := &ImageResizer{
 		resize: func(file multipart.File, width int, heigth int) (*image.NRGBA, error) {
 			return &image.NRGBA{}, nil
 		},
@@ -78,10 +96,28 @@ func TestResizeImage(t *testing.T) {
 			Filename: "test2.jpg",
 			Format:   "jpg",
 		},
+		{
+			File:     &FileStub{},
+			Filename: "error1.jpg",
+			Format:   "jpg",
+		},
+		{
+			File:     &FileStub{},
+			Filename: "error2.jpg",
+			Format:   "jpg",
+		},
 	} {
 		t.Run(scenerio.Filename, func(t *testing.T) {
-			uniqueName, _ := img.ResizeImage(scenerio, 200, 300)
+			uniqueName, err := resizer.ResizeImage(scenerio, 200, 300)
+			img := storer.Get(uniqueName)
+
+			if err != nil {
+				assert.Nil(img)
+				return
+			}
+
 			assert.Contains(uniqueName, strings.Replace(scenerio.Filename, fmt.Sprintf(".%s", scenerio.Format), "", -1))
+			assert.NotNil(img)
 		})
 	}
 
