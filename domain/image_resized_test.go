@@ -32,7 +32,6 @@ func TestCreatedAtUnix(t *testing.T) {
 	} {
 		t.Run(scenerio.img.FilePath, func(t *testing.T) {
 			result := scenerio.img.CreatedAtUnix()
-			fmt.Println("R", result)
 			assert.Equal(result, scenerio.expectResult)
 		})
 	}
