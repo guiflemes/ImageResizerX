@@ -47,11 +47,10 @@ func NewHttpApp() *httpApp {
 		websocketOptions: &websocket.AcceptOptions{OriginPatterns: []string{"127.0.0.0"}},
 		imageServer: func(w http.ResponseWriter, r *http.Request, filename string) {
 			img, err := localDiskRepo.Retrieve(filename)
-			
+
 			if err != nil {
 				http.Error(w, "File not found", http.StatusNotFound)
 			}
-
 
 			w.Header().Set("Content-Type", "image/"+img.Format())
 			w.Header().Set("Content-Disposition", "attachment; filename="+strconv.Quote(filename))
@@ -108,6 +107,7 @@ func (a *httpApp) WebsocketHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if websocket.CloseStatus(err) == websocket.StatusAbnormalClosure || websocket.CloseStatus(err) == websocket.StatusGoingAway {
+		logs.Logger.Info("Closing WebSocket connection due to abnormal closure or going away", zap.Error(err))
 		return
 	}
 

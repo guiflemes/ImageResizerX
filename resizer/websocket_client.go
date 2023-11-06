@@ -85,6 +85,12 @@ func (c *websocketClient) removeSubscription(s *subscription) {
 	logs.Logger.Info("remove Subscription")
 }
 
+func (c *websocketClient) SubscriptionCount() int {
+	c.lock.RLock()
+	defer c.lock.RUnlock()
+	return len(c.subscriptions)
+}
+
 func (c *websocketClient) Brodcast(msg Message) {
 	c.lock.RLock()
 	defer c.lock.RUnlock()
