@@ -76,3 +76,29 @@ func TestHandle(t *testing.T) {
 	assert.False(hasWrite)
 
 }
+
+func TestBroadcast(t *testing.T) {
+	assert := assert.New(t)
+
+	wsClient := NewTestwebsocketClient(10)
+	sub1 := &subscription{
+		message: make(chan Message, wsClient.messageBuffer),
+	}
+
+	sub2 := &subscription{
+		message: make(chan Message, wsClient.messageBuffer),
+	}
+	wsClient.addSubscription(sub1)
+	wsClient.addSubscription(sub2)
+
+	defer func() {
+		wsClient.removeSubscription(sub1)
+		wsClient.removeSubscription(sub2)
+	}()
+
+	msg := Message{Action: "", DownloadUrl: ""}
+	wsClient.Brodcast(msg)
+
+	assert.Equal(msg, <-sub1.message)
+	assert.Equal(msg, <-sub2.message)
+}
