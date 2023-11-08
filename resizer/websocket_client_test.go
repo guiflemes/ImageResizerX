@@ -51,6 +51,7 @@ func TestHandle(t *testing.T) {
 	defer wsClient.removeSubscription(sub)
 
 	var wg sync.WaitGroup
+	wg.Add(1)
 	go func() {
 		defer close(sub.message)
 		for sub := range wsClient.subscriptions {
@@ -58,18 +59,17 @@ func TestHandle(t *testing.T) {
 		}
 		wg.Done()
 	}()
-	wg.Add(1)
 
 	err := wsClient.Handle(ctx, wsConn)
 	assert.NoError(err)
 	assert.True(hasWrite)
 
 	hasWrite = false
+	wg.Add(1)
 	go func() {
 		cancel()
 		wg.Done()
 	}()
-	wg.Add(1)
 
 	err = wsClient.Handle(ctx, wsConn)
 	assert.Equal(err, context.Canceled)
